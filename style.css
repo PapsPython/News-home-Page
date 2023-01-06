@@ -50,6 +50,12 @@ li a{
   font-weight:normal;
 }
 
+
+ul li a:hover{
+  color: hsl(5, 85%, 63%);
+  }
+
+
 .container{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -72,7 +78,6 @@ aside{
 
 .title_subtext{
   grid-column: span 2;
-  
 }
 
 .side_img_text{
@@ -178,7 +183,7 @@ font-size: 50px;
    /*transform: translateX(100%);*/
  }
 
- /*.back_of_nav [data-visible = "true"] {
+/* .back_of_nav [data-visible = "true"] {
     transform: translateX(0%);
   }*/
   
@@ -189,9 +194,7 @@ font-size: 50px;
    flex-direction: column;
  } 
 
-  ul li a:hover{
-    
-  }
+  
   
  .container {
   display:grid;
@@ -236,7 +239,7 @@ h1{
    left:90%;
    top:9%;
    cursor: pointer;
-
+   z-index: 9999;
  }
  
 }

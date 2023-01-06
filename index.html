@@ -15,11 +15,11 @@
   <header class="navigation">
     <img src="images/logo.svg" alt="a letter W" class="logo-left">
 
-    <div class="burger_icon" id="burger_button" aria- controls="side_nav" aria-expanded="false">
-      <img src="images/icon-menu.svg">
+    <div class="burger_icon" id="burger_button" aria-controls="side_nav" aria-expanded="false">
+      <img src="images/icon-menu.svg" id="burger_img">
     </div>
 
-    <div class="back_of_nav" id="side_nav" data-visible = "false">
+    <div class="back_of_nav" id="side_nav" data-visible="false">
       <ul>
         <li><a href=#> Home </a></li>
         <li><a href=#> New </a></li>
@@ -34,7 +34,7 @@
   </header>
   <main class="container">
     <img class="lego_img" src="images/image-web-3-desktop.jpg" alt="colourful lego blocks">
-  <aside>
+    <aside>
       <h2>New</h2>
       <h4> Hydrogen Vs Electric Cars </h4>
       <p> Will hydrogen-fueled cars ever catch up to EVs?</p>
@@ -44,7 +44,7 @@
       <hr>
       <h4> Is VC funding drying up?</h4>
       <p> Private funding by VC firms is down 50% YOY. We take a look at what that means</p>
-  </aside>
+    </aside>
 
     <h1 class="margin-space"> The Bright<br /> Future of<br /> Web
       3.0?</h1>
@@ -102,34 +102,42 @@
 
   </main>
 
-  <script src="script.js">
+  <script>
 
-    /*  const burgerButton = document.querySelector("burger_icon")
-  
-      const sideNav = document.querySelector("back_of_nav")
-  
-  
-      burgerButton.addEventListener("click", function () {
-        const visibility = sideNav.getAttribute("data-visible");
-  
-        if (visibility === "false") {
-          sideNav.setAttribute("data-visible", true)
-        } else if (visibility === "true") {
-          sideNav.setAttribute("data-visible", false)
-        }*/
+    /*const burgerButton = document.querySelector(".burger_icon")
 
-    const burgerButton = document.querySelector("burger_icon")
+    const sideNav = document.querySelector(".back_of_nav")
 
-    const sideNav = document.querySelector("back_of_nav")
+
+    burgerButton.addEventListener("click", function () {
+      console.log("clicked")
+      
+      const visibility = sideNav.getAttribute("data-visible");
+
+      if (visibility === "false") {
+        sideNav.setAttribute("data-visible", true)
+      } else if (visibility === "true") {
+        sideNav.setAttribute("data-visible", false)
+      }*/
+
+    const burgerButton = document.querySelector(".burger_icon")
+
+    const sideNav = document.querySelector(".back_of_nav")
+
+    const burgerImg = document.getElementById("burger_img")
 
     sideNav.style.right = "-250px";
-    
-    burgerButton.onclick = function () {
-   
+
+    burgerButton.addEventListener("click", function () {
+
+      console.log("button clicked")
+
       if (sideNav.style.right == "-250px") {
-        sideNav.style.right = "0";
-      } else if (sideNav.style.right == "0") {
+        sideNav.style.right = "0px";
+        burgerImg.src = "images/icon-menu-close.svg"
+      } else if (sideNav.style.right == "0px") {
         sideNav.style.right = "-250px";
+        burgerImg.src = "images/icon-menu.svg"
       }
 
     })
